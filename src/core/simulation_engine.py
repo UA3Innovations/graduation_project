@@ -8,12 +8,24 @@ import random
 import os
 from datetime import datetime, timedelta
 from typing import Dict, List, Tuple, Optional, Set
-from .data_models import BusTransitData, SimulationConfig, PassengerGroup
-from ..components.transit_network import TransitNetwork
-from ..components.bus_management import BusManager
-from ..components.schedule_generator import ScheduleGenerator
-from ..components.passenger_generator import PassengerGenerator
 import json
+
+# Handle imports with fallback for different execution contexts
+try:
+    from .data_models import BusTransitData, SimulationConfig, PassengerGroup
+except ImportError:
+    from core.data_models import BusTransitData, SimulationConfig, PassengerGroup
+
+try:
+    from ..components.transit_network import TransitNetwork
+    from ..components.bus_management import BusManager
+    from ..components.schedule_generator import ScheduleGenerator
+    from ..components.passenger_generator import PassengerGenerator
+except ImportError:
+    from components.transit_network import TransitNetwork
+    from components.bus_management import BusManager
+    from components.schedule_generator import ScheduleGenerator
+    from components.passenger_generator import PassengerGenerator
 
 
 class SimulationEngine:

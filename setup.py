@@ -18,7 +18,7 @@ setup(
     version="1.0.0",
     author="Bus Transit Simulation Team",
     author_email="your.email@example.com",
-    description="A comprehensive bus transit simulation pipeline with Azure cloud deployment capabilities",
+    description="A comprehensive bus transit simulation pipeline for local deployment",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/yourusername/bus-transit-simulation-pipeline",
@@ -49,11 +49,6 @@ setup(
             "flake8>=3.8",
             "mypy>=0.800",
         ],
-        "azure": [
-            "azure-containerinstance>=2.0.0",
-            "azure-storage-blob>=12.0.0",
-            "azure-identity>=1.7.0",
-        ],
     },
     include_package_data=True,
     package_data={
@@ -62,10 +57,9 @@ setup(
     entry_points={
         "console_scripts": [
             "bus-simulation=pipeline.pipeline_runner:main",
-            "bus-deploy=scripts.deploy_to_azure:main",
         ],
     },
-    keywords="simulation, transit, bus, transportation, azure, cloud, optimization",
+    keywords="simulation, transit, bus, transportation, optimization",
     project_urls={
         "Bug Reports": "https://github.com/yourusername/bus-transit-simulation-pipeline/issues",
         "Source": "https://github.com/yourusername/bus-transit-simulation-pipeline",

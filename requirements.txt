@@ -5,15 +5,6 @@ pandas>=2.0.0
 # Configuration management
 PyYAML>=6.0
 
-# Azure SDK for cloud integration
-azure-storage-blob>=12.17.0
-azure-identity>=1.13.0
-azure-keyvault-secrets>=4.7.0
-azure-monitor-opentelemetry-exporter>=1.0.0
-
-# Logging and monitoring
-opencensus-ext-azure>=1.1.0
-
 # Progress tracking
 tqdm>=4.65.0
 

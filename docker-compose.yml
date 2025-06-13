@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  bus-simulation:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: bus-simulation-main
+    volumes:
+      - ./output:/app/output
+      - ./config:/app/config
+      - ./data:/app/data
+    environment:
+      - PYTHONPATH=/app/src:/app/pipeline:/app
+      - PYTHONUNBUFFERED=1
+    networks:
+      - bus-network
+    restart: unless-stopped
+
+  bus-simulation-test:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.local
+    container_name: bus-simulation-test
+    volumes:
+      - ./output:/app/output
+      - ./config:/app/config
+      - ./data:/app/data
+    environment:
+      - PYTHONPATH=/app/src:/app/pipeline:/app
+      - PYTHONUNBUFFERED=1
+    networks:
+      - bus-network
+    profiles:
+      - test
+
+  # Optional: Add a simple web server to view results
+  results-viewer:
+    image: nginx:alpine
+    container_name: bus-results-viewer
+    ports:
+      - "8080:80"
+    volumes:
+      - ./output:/usr/share/nginx/html:ro
+    networks:
+      - bus-network
+    profiles:
+      - viewer
+
+networks:
+  bus-network:
+    driver: bridge
+
+volumes:
+  simulation-output:
+    driver: local 

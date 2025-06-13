@@ -129,48 +129,36 @@ dmypy.json
 .pyre/
 
 # Project-specific ignores
-# Simulation output files
-test_output_*/
 output/
-results/
-logs/
-
-# Azure deployment files
-.azure/
-azure-deployment.log
-
-# Local development files
-local_test.py
-temp_*.py
-debug_*.py
-
-# CSV data files (if they're too large)
-*.csv
-!data/ankara_bus_stops_10.csv  # Keep the essential data file
-
-# JSON output files
-*_statistics.json
-*_results.json
-
-# MacOS files
+*.log
 .DS_Store
 
-# Windows files
-Thumbs.db
-ehthumbs.db
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.bak
 
 # IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# Docker volumes and temp files
-docker-compose.override.yml
-.dockerignore
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Temporary files
-*.tmp
-*.temp
-*.bak 
+# CSV data files (if they're too large)
+*.csv
+!data/ankara_bus_stops.csv     # Keep the essential data file
+
+# JSON output files
+output/*.json
+results/*.json
+
+# Large result files
+*.parquet
+*.h5
+*.hdf5 

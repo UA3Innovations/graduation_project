@@ -1,5 +1,5 @@
 """
-Main pipeline runner for orchestrating bus transit simulation on Azure.
+Main pipeline runner for orchestrating bus transit simulation locally.
 """
 
 import os
@@ -62,7 +62,7 @@ class SimulationPipeline:
                     'seed': 42
                 },
                 'data': {
-                    'stops_file': 'data/ankara_bus_stops_10.csv'
+                    'stops_file': 'data/ankara_bus_stops.csv'
                 },
                 'output': {
                     'directory': 'output',

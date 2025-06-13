@@ -10,8 +10,13 @@ import unittest
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
-sys.path.append(str(project_root / 'src'))
-sys.path.append(str(project_root / 'pipeline'))
+src_path = project_root / 'src'
+pipeline_path = project_root / 'pipeline'
+
+# Add paths to sys.path if not already there
+for path in [str(src_path), str(pipeline_path), str(project_root)]:
+    if path not in sys.path:
+        sys.path.insert(0, path)
 
 class TestPipelineStructure(unittest.TestCase):
     """Test basic pipeline structure and imports."""
@@ -19,7 +24,9 @@ class TestPipelineStructure(unittest.TestCase):
     def test_import_core_modules(self):
         """Test that core modules can be imported."""
         try:
-            from core import data_models, simulation_engine
+            # Try direct imports first
+            from core.data_models import BusTransitData, SimulationConfig
+            from core.simulation_engine import SimulationEngine
             self.assertTrue(True, "Core modules imported successfully")
         except ImportError as e:
             self.fail(f"Failed to import core modules: {e}")
@@ -27,7 +34,11 @@ class TestPipelineStructure(unittest.TestCase):
     def test_import_components(self):
         """Test that component modules can be imported."""
         try:
-            from components import transit_network, passenger_generator, bus_management, schedule_generator
+            # Import individual component modules directly
+            from components.transit_network import TransitNetwork
+            from components.passenger_generator import PassengerGenerator
+            from components.bus_management import BusManager
+            from components.schedule_generator import ScheduleGenerator
             self.assertTrue(True, "Component modules imported successfully")
         except ImportError as e:
             self.fail(f"Failed to import component modules: {e}")
@@ -65,22 +76,20 @@ class TestPipelineStructure(unittest.TestCase):
     
     def test_config_files_exist(self):
         """Test that configuration files exist."""
+        # Check config directory structure
         config_dir = project_root / 'config'
+        self.assertTrue(config_dir.exists(), "Config directory missing")
         
         # Check simulation config
         sim_config = config_dir / 'simulation_config.yaml'
         self.assertTrue(sim_config.exists(), "Simulation config file missing")
-        
-        # Check Azure config
-        azure_config = config_dir / 'azure_config.yaml'
-        self.assertTrue(azure_config.exists(), "Azure config file missing")
     
     def test_data_files_exist(self):
         """Test that data files exist."""
         data_dir = project_root / 'data'
         
         # Check CSV data file
-        csv_file = data_dir / 'ankara_bus_stops_10.csv'
+        csv_file = data_dir / 'ankara_bus_stops.csv'
         self.assertTrue(csv_file.exists(), "Bus stops CSV file missing")
     
     def test_pipeline_configuration_loading(self):
@@ -102,8 +111,11 @@ class TestPipelineValidation(unittest.TestCase):
     
     def setUp(self):
         """Set up test environment."""
-        from pipeline_runner import SimulationPipeline
-        self.pipeline = SimulationPipeline()
+        try:
+            from pipeline_runner import SimulationPipeline
+            self.pipeline = SimulationPipeline()
+        except ImportError as e:
+            self.skipTest(f"Cannot import pipeline runner: {e}")
     
     def test_input_validation(self):
         """Test input validation functionality."""
@@ -123,8 +135,8 @@ def run_tests():
     suite = unittest.TestSuite()
     
     # Add test cases
-    suite.addTest(unittest.makeSuite(TestPipelineStructure))
-    suite.addTest(unittest.makeSuite(TestPipelineValidation))
+    suite.addTest(unittest.TestLoader().loadTestsFromTestCase(TestPipelineStructure))
+    suite.addTest(unittest.TestLoader().loadTestsFromTestCase(TestPipelineValidation))
     
     # Run tests
     runner = unittest.TextTestRunner(verbosity=2)

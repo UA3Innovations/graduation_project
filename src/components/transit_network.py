@@ -8,7 +8,12 @@ import numpy as np
 import random
 from datetime import datetime, timedelta
 from typing import Dict, List, Tuple, Optional, Set
-from ..core.data_models import Stop, Line, TravelSegment, BusTransitData
+
+# Handle imports with fallback for different execution contexts
+try:
+    from ..core.data_models import Stop, Line, TravelSegment, BusTransitData
+except ImportError:
+    from core.data_models import Stop, Line, TravelSegment, BusTransitData
 
 
 class TransitNetwork:

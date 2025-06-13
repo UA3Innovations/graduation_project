@@ -18,7 +18,7 @@ simulation:
 
 # Data Sources
 data:
-  stops_file: "data/ankara_bus_stops_10.csv"
+  stops_file: "data/ankara_bus_stops.csv"
   
 # Output Settings  
 output:

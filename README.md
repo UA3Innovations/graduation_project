@@ -1,300 +1,166 @@
 # Bus Transit Simulation Pipeline
 
-A comprehensive bus transit simulation system designed for cloud deployment on Microsoft Azure.
+A comprehensive bus transit simulation system designed for local deployment and analysis.
 
-## 🚌 Overview
+## 🚌 Features
 
-This pipeline simulates bus transit operations with realistic passenger flows, schedule adherence, and system performance metrics. It's designed to run efficiently on Azure Container Instances or Azure Batch for scalable simulation workloads.
+- **Realistic Transit Simulation**: Models bus routes, stops, passenger flow, and real-time operations
+- **Configurable Parameters**: Easily adjust simulation settings via YAML configuration files
+- **Performance Analytics**: Generate detailed reports on bus utilization, passenger wait times, and system efficiency
+- **Extensible Architecture**: Modular design allows for easy customization and extension
 
 ## 📁 Project Structure
 
 ```
 bus_simulation_pipeline/
-├── config/                     # Configuration files
-│   ├── simulation_config.yaml  # Simulation parameters
-│   └── azure_config.yaml      # Azure deployment settings
 ├── src/                        # Source code
-│   ├── core/                  # Core simulation components
-│   │   ├── simulation_engine.py
-│   │   └── data_models.py
-│   └── components/            # Specialized modules
-│       ├── transit_network.py
-│       ├── passenger_generator.py
-│       ├── bus_management.py
-│       └── schedule_generator.py
-├── pipeline/                   # Pipeline orchestration
-│   ├── pipeline_runner.py     # Main pipeline coordinator
-│   └── azure_deployer.py      # Azure deployment manager
-├── docker/                     # Docker configuration
-│   └── Dockerfile             # Container definition
-├── scripts/                    # Deployment and utility scripts
-│   ├── deploy_to_azure.py     # Main deployment script
-│   └── run_simulation.py      # Local simulation runner
+│   ├── core/                   # Core simulation components
+│   ├── components/             # Individual system components
+│   └── utils/                  # Utility functions
+├── config/                     # Configuration files
+│   └── simulation_config.yaml  # Main simulation settings
 ├── data/                       # Input data
-│   └── ankara_bus_stops_10.csv
+│   └── ankara_bus_stops.csv
+├── pipeline/                   # Pipeline orchestration
+│   └── pipeline_runner.py     # Main pipeline runner
+├── scripts/                    # Utility scripts
+│   ├── run_simulation.py      # Local simulation runner
+│   └── setup_and_test.py      # Setup and testing script
 ├── tests/                      # Test files
 └── output/                     # Local output directory
 ```
 
+## 🛠️ Requirements
+
+1. **Python 3.8+**
+2. **Required packages** (see `requirements.txt`)
+
 ## 🚀 Quick Start
 
-### Prerequisites
+### Local Testing
 
-1. **Python 3.11+**
-2. **Azure CLI** (for deployment)
-3. **Docker** (for containerization)
-4. **Azure Subscription** with appropriate permissions
-
-### Local Setup
-
-1. **Clone and setup environment:**
 ```bash
-cd bus_simulation_pipeline
+# Install dependencies
 pip install -r requirements.txt
-```
 
-2. **Run simulation locally:**
-```bash
-python scripts/deploy_to_azure.py --local-run
-```
+# Run a quick test
+python scripts/setup_and_test.py
 
-3. **Test configuration:**
-```bash
-python scripts/deploy_to_azure.py --test-only
-```
+# Run local simulation
+python scripts/run_simulation.py
 
-### Azure Deployment
-
-1. **Setup Azure credentials:**
-```bash
-# Login to Azure
-az login
-
-# Set subscription (replace with your subscription ID)
-export AZURE_SUBSCRIPTION_ID="your-subscription-id"
-
-# Optional: Setup storage connection string
-export AZURE_STORAGE_CONNECTION_STRING="your-storage-connection-string"
-```
-
-2. **Deploy to development environment:**
-```bash
-python scripts/deploy_to_azure.py --environment development
-```
-
-3. **Deploy to production:**
-```bash
-python scripts/deploy_to_azure.py --environment production \
-  --start-date 2024-01-01 \
-  --end-date 2024-01-31 \
-  --buses-per-line 10
+# Test with custom parameters
+python scripts/run_simulation.py --local-run
 ```
 
 ## ⚙️ Configuration
 
-### Simulation Configuration (`config/simulation_config.yaml`)
+Edit `config/simulation_config.yaml`:
 
 ```yaml
 simulation:
-  start_date: "2024-01-01"
-  end_date: "2024-01-07"
-  time_step: 5              # minutes
-  buses_per_line: 6
-  randomize_travel_times: true
-  randomize_passenger_demand: true
-  weather_effects_probability: 0.15
-  seed: 42
+  start_date: "2025-06-02"
+  end_date: "2025-06-09"
+  time_step: 5
 
 data:
-  stops_file: "data/ankara_bus_stops_10.csv"
+  stops_file: "data/ankara_bus_stops.csv"
 
 output:
   directory: "output"
-  summary: true
-  debug: false
+  export_format: "csv"
 ```
 
-### Azure Configuration (`config/azure_config.yaml`)
+## 📊 Output
 
-```yaml
-azure:
-  resource_group: "bus-simulation-rg"
-  location: "East US"
-  
-  container:
-    name: "bus-simulation-container"
-    image: "bus-simulation:latest"
-    cpu_cores: 2.0
-    memory_gb: 4.0
-    restart_policy: "Never"
+The simulation generates:
+- **Passenger flow data**: Boarding/alighting patterns
+- **Bus utilization metrics**: Occupancy rates and efficiency
+- **Performance analytics**: Wait times and service quality
+- **System reports**: Overall network performance
 
-environment:
-  development:
-    cpu_cores: 1.0
-    memory_gb: 2.0
-    timeout_hours: 4
-  
-  production:
-    cpu_cores: 4.0
-    memory_gb: 8.0
-    timeout_hours: 48
-```
-
-## 🐳 Docker Deployment
-
-### Build Container
+## 🧪 Testing
 
 ```bash
-# Build the Docker image
+# Run all tests
+python -m pytest tests/
+
+# Run specific test
+python tests/test_pipeline.py
+
+# Setup and test everything
+python scripts/setup_and_test.py
+```
+
+## 📈 Performance
+
+- **Local simulation**: Handles 1-week simulations in minutes
+- **Memory efficient**: Optimized for large datasets
+- **Configurable precision**: Balance speed vs. accuracy
+
+## 🐳 Docker Usage
+
+### Build and Run with Docker
+
+```bash
+# Build the main simulation container
 docker build -f docker/Dockerfile -t bus-simulation:latest .
 
-# Test locally
+# Run simulation with Docker
 docker run --rm -v $(pwd)/output:/app/output bus-simulation:latest
+
+# Or use docker-compose for easier management
+docker-compose up bus-simulation
+
+# Run tests with Docker
+docker-compose --profile test up bus-simulation-test
+
+# View results with web server (optional)
+docker-compose --profile viewer up results-viewer
 ```
 
-### Push to Azure Container Registry
+### Docker Development
 
 ```bash
-# Create Azure Container Registry
-az acr create --resource-group bus-simulation-rg \
-  --name bussimulationacr --sku Basic
+# Build and run for development
+docker-compose up --build
 
-# Login to ACR
-az acr login --name bussimulationacr
+# Run specific services
+docker-compose up bus-simulation
+docker-compose --profile test up bus-simulation-test
 
-# Tag and push image
-docker tag bus-simulation:latest bussimulationacr.azurecr.io/bus-simulation:latest
-docker push bussimulationacr.azurecr.io/bus-simulation:latest
+# Clean up containers
+docker-compose down
 ```
 
-## 📊 Output Files
-
-The simulation generates the following output files:
-
-| File | Description |
-|------|-------------|
-| `passenger_flow_results.csv` | Detailed passenger boarding/alighting data |
-| `bus_positions_results.csv` | Bus location and load tracking |
-| `buses.csv` | Bus fleet configuration |
-| `line_schedules.csv` | Generated line schedules |
-| `bus_assignments.csv` | Bus-to-line assignments |
-| `summary_statistics.json` | Aggregated performance metrics |
-
-## 🔧 Advanced Usage
-
-### Custom Simulation Parameters
+## 🔧 Development
 
 ```bash
-# Extended simulation with more buses
-python scripts/deploy_to_azure.py \
-  --environment production \
-  --start-date 2024-01-01 \
-  --end-date 2024-12-31 \
-  --buses-per-line 15 \
-  --time-step 2
+# Install in development mode
+pip install -e .
 
-# Quick development test
-python scripts/deploy_to_azure.py \
-  --environment testing \
-  --start-date 2024-01-01 \
-  --end-date 2024-01-02 \
-  --buses-per-line 3
+# Run with development dependencies
+pip install -e ".[dev]"
+
+# Format code
+black src/ tests/
+
+# Run linting
+flake8 src/ tests/
 ```
 
-### Pipeline Monitoring
+## 📝 License
 
-```bash
-# Monitor running container
-az container show --resource-group bus-simulation-rg \
-  --name bus-simulation-container-development-1234567890
-
-# View logs
-az container logs --resource-group bus-simulation-rg \
-  --name bus-simulation-container-development-1234567890
-```
-
-### Resource Management
-
-```bash
-# List all containers
-az container list --resource-group bus-simulation-rg
-
-# Clean up resources
-az group delete --name bus-simulation-rg --yes --no-wait
-```
-
-## 🎛️ Environment Variables
-
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `AZURE_SUBSCRIPTION_ID` | Azure subscription ID | Yes (for Azure deployment) |
-| `AZURE_STORAGE_CONNECTION_STRING` | Azure Storage connection string | Optional |
-| `AZURE_STORAGE_ACCOUNT` | Storage account name | Optional |
-| `AZURE_STORAGE_CONTAINER` | Storage container name | Optional |
-
-## 📈 Performance Tuning
-
-### Azure Container Instances
-
-- **Development**: 1 CPU, 2GB RAM (cost-optimized)
-- **Production**: 4 CPU, 8GB RAM (performance-optimized)
-- **Testing**: 0.5 CPU, 1GB RAM (minimal resources)
-
-### Simulation Optimization
-
-- Reduce `time_step` for higher precision (increases runtime)
-- Increase `buses_per_line` for realistic scenarios
-- Enable `debug: true` for detailed logging (increases I/O)
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-1. **"Container deployment failed"**
-   - Check Azure subscription permissions
-   - Verify resource group exists
-   - Ensure container image is accessible
-
-2. **"Simulation timeout"**
-   - Increase `--timeout-minutes` parameter
-   - Check Azure Container Instance logs
-   - Reduce simulation period or complexity
-
-3. **"Missing output files"**
-   - Verify storage configuration
-   - Check container execution logs
-   - Ensure simulation completed successfully
-
-### Debug Commands
-
-```bash
-# Validate configuration
-python scripts/deploy_to_azure.py --test-only
-
-# Run locally for debugging
-python scripts/deploy_to_azure.py --local-run --config config/simulation_config.yaml
-
-# Check Azure resources
-az resource list --resource-group bus-simulation-rg
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
-3. Test changes locally
-4. Submit a pull request
+3. Make your changes
+4. Add tests for new functionality
+5. Submit a pull request
 
-## 📝 License
+## 📞 Support
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
-## 🔗 Related Links
-
-- [Azure Container Instances Documentation](https://docs.microsoft.com/en-us/azure/container-instances/)
-- [Azure CLI Reference](https://docs.microsoft.com/en-us/cli/azure/)
-- [Docker Documentation](https://docs.docker.com/)
-
-For support, please open an issue or contact the development team. 
+For questions or issues, please open an issue on the GitHub repository. 

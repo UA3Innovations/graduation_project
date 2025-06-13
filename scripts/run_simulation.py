@@ -5,8 +5,19 @@ Main script to run the bus transit simulation.
 import argparse
 import json
 import os
+import sys
 import time
 from datetime import datetime, timedelta
+
+# Add the src directory to the path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
+
+# Handle imports with fallback for different execution contexts
+try:
+    from core.data_models import BusTransitData, SimulationConfig
+    from core.simulation_engine import SimulationEngine
+except ImportError:
+    # Fallback for direct execution
 from data_models import BusTransitData, SimulationConfig
 from simulation_engine import SimulationEngine
 
@@ -15,7 +26,10 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description='Run the bus transit simulation.')
     
-    parser.add_argument('--stops-file', type=str, default='ankara_bus_stops_10.csv',
+    parser.add_argument('--config', type=str, 
+                       help='Path to YAML configuration file')
+    
+    parser.add_argument('--stops-file', type=str, default='ankara_bus_stops.csv',
                        help='Path to CSV file with stops and lines information')
     
     parser.add_argument('--start-date', type=str, 
@@ -51,37 +65,75 @@ def main():
     """Main function to run the simulation."""
     args = parse_args()
     
+    # Load configuration from file if provided
+    config_data = {}
+    if args.config:
+        import yaml
+        try:
+            with open(args.config, 'r') as f:
+                config_data = yaml.safe_load(f)
+            print(f"Loaded configuration from {args.config}")
+        except Exception as e:
+            print(f"Warning: Could not load config file {args.config}: {e}")
+    
+    # Extract configuration values with config file override
+    if 'simulation' in config_data:
+        sim_config = config_data['simulation']
+        start_date_str = sim_config.get('start_date', args.start_date)
+        end_date_str = sim_config.get('end_date', args.end_date)
+        time_step = sim_config.get('time_step', args.time_step)
+        buses_per_line = sim_config.get('buses_per_line', args.buses_per_line)
+        seed = sim_config.get('seed', args.seed)
+    else:
+        start_date_str = args.start_date
+        end_date_str = args.end_date
+        time_step = args.time_step
+        buses_per_line = args.buses_per_line
+        seed = args.seed
+    
+    if 'data' in config_data:
+        data_config = config_data['data']
+        stops_file = data_config.get('stops_file', args.stops_file)
+    else:
+        stops_file = args.stops_file
+    
+    if 'output' in config_data:
+        output_config = config_data['output']
+        output_dir = output_config.get('directory', args.output_dir)
+    else:
+        output_dir = args.output_dir
+    
     # Print banner
     print("\n" + "="*60)
     print(" Bus Transit Simulator ".center(60, "="))
     print("="*60 + "\n")
     
     # Create output directory if it doesn't exist
-    os.makedirs(args.output_dir, exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
     
     # Parse dates
-    start_date = datetime.strptime(args.start_date, '%Y-%m-%d')
-    end_date = datetime.strptime(args.end_date, '%Y-%m-%d')
+    start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
+    end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
     end_date = end_date.replace(hour=23, minute=59)  # End at the end of the day
     
     # Print simulation parameters
     print(f"Simulation Parameters:")
-    print(f"  - Transit Data: {args.stops_file}")
-    print(f"  - Period: {args.start_date} to {args.end_date}")
-    print(f"  - Time Step: {args.time_step} minutes")
-    print(f"  - Buses per Line: {args.buses_per_line}")
-    print(f"  - Random Seed: {args.seed}")
+    print(f"  - Transit Data: {stops_file}")
+    print(f"  - Period: {start_date_str} to {end_date_str}")
+    print(f"  - Time Step: {time_step} minutes")
+    print(f"  - Buses per Line: {buses_per_line}")
+    print(f"  - Random Seed: {seed}")
     print()
     
     # Create simulation configuration
     config = SimulationConfig(
         start_date=start_date,
         end_date=end_date,
-        time_step=args.time_step,
+        time_step=time_step,
         randomize_travel_times=True,
         randomize_passenger_demand=True,
         weather_effects_probability=0.15,
-        seed=args.seed
+        seed=seed
     )
     
     # Record start time
@@ -99,7 +151,7 @@ def main():
     
     print("Step 1: Loading transit data...")
     start_time = time.time()
-    success = engine.load_data(args.stops_file)
+    success = engine.load_data(stops_file)
     if not success:
         print("Failed to load data. Exiting.")
         return
@@ -107,7 +159,7 @@ def main():
     
     print(f"Step 2: Setting up simulation...")
     start_time = time.time()
-    success = engine.setup_simulation(args.buses_per_line)
+    success = engine.setup_simulation(buses_per_line)
     if not success:
         print("Failed to set up simulation. Exiting.")
         return
@@ -120,7 +172,7 @@ def main():
     
     print(f"Step 4: Exporting results...")
     start_time = time.time()
-    engine.export_results(args.output_dir)
+    engine.export_results(output_dir)
     print(f"Results exported in {time.time() - start_time:.2f} seconds.\n")
     
     if args.summary:
@@ -152,14 +204,14 @@ def main():
                 print(f"  {i+1}. Bus {bus['bus_id']} on line {bus['line_id']}: {bus['occupancy_rate']:.2f} occupancy ratio (max load: {bus['new_load']})")
             
             # Save summary to JSON
-            with open(f"{args.output_dir}/summary_statistics.json", 'w') as f:
+            with open(f"{output_dir}/summary_statistics.json", 'w') as f:
                 json.dump(summary, f, indent=2)
     
     # Generate visualization instructions
     viz_script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'visualization.py')
     if os.path.exists(viz_script_path):
         print("\nTo visualize results, run:")
-        print(f"python visualization.py --results-dir {args.output_dir}")
+        print(f"python visualization.py --results-dir {output_dir}")
     
     # Print overall time
     overall_time = time.time() - overall_start_time

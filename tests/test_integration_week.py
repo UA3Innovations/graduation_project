@@ -50,7 +50,7 @@ def main():
     engine.debug = False  # Set to True for detailed output
     
     print("Step 1: Loading transit data...")
-    csv_path = os.path.join(compartmentalized_path, 'ankara_bus_stops_10.csv')
+    csv_path = os.path.join(compartmentalized_path, 'ankara_bus_stops.csv')
     success = engine.load_data(csv_path)
     if not success:
         print("❌ Failed to load data")

@@ -22,10 +22,10 @@ def main():
     # Step 1: Check Python version
     print("\n1️⃣ Checking Python version...")
     python_version = sys.version_info
-    if python_version.major >= 3 and python_version.minor >= 11:
+    if python_version.major >= 3 and python_version.minor >= 8:
         print(f"✅ Python {python_version.major}.{python_version.minor}.{python_version.micro} - OK")
     else:
-        print(f"❌ Python {python_version.major}.{python_version.minor}.{python_version.micro} - Need 3.11+")
+        print(f"❌ Python {python_version.major}.{python_version.minor}.{python_version.micro} - Need 3.8+")
         return 1
     
     # Step 2: Install dependencies
@@ -57,19 +57,28 @@ def main():
     # Step 4: Test configuration validation
     print("\n4️⃣ Testing configuration validation...")
     try:
-        result = subprocess.run([
-            sys.executable, "scripts/deploy_to_azure.py", "--test-only"
-        ], capture_output=True, text=True, cwd=project_root)
-        
-        if result.returncode == 0:
-            print("✅ Configuration validation passed")
+        # Check if config file exists and is valid
+        config_file = project_root / "config" / "simulation_config.yaml"
+        if config_file.exists():
+            print("✅ Configuration file found")
+            
+            # Try to load and validate the config
+            import yaml
+            with open(config_file, 'r') as f:
+                config = yaml.safe_load(f)
+            
+            required_sections = ['simulation', 'data', 'output']
+            for section in required_sections:
+                if section in config:
+                    print(f"✅ Configuration section '{section}' found")
+                else:
+                    print(f"❌ Missing configuration section: {section}")
+                    return 1
         else:
-            print("❌ Configuration validation failed:")
-            print(result.stdout)
-            print(result.stderr)
+            print("❌ Configuration file not found")
             return 1
     except Exception as e:
-        print(f"❌ Error testing configuration: {e}")
+        print(f"❌ Error validating configuration: {e}")
         return 1
     
     # Step 5: Quick local simulation test
@@ -80,8 +89,8 @@ def main():
     test_config_content = """
 # Quick test configuration
 simulation:
-  start_date: "2024-01-01"
-  end_date: "2024-01-01"  # Just one day for quick test
+  start_date: "2025-06-02"
+  end_date: "2025-06-02"  # Just one day for quick test
   time_step: 15           # Larger time step for speed
   buses_per_line: 2       # Fewer buses for speed
   randomize_travel_times: true
@@ -90,7 +99,7 @@ simulation:
   seed: 42
 
 data:
-  stops_file: "data/ankara_bus_stops_10.csv"
+  stops_file: "data/ankara_bus_stops.csv"
 
 output:
   directory: "test_output"
@@ -104,8 +113,8 @@ output:
     
     try:
         result = subprocess.run([
-            sys.executable, "scripts/deploy_to_azure.py", 
-            "--local-run", "--config", "config/test_config.yaml"
+            sys.executable, "scripts/run_simulation.py", 
+            "--config", "config/test_config.yaml"
         ], capture_output=True, text=True, cwd=project_root, timeout=300)  # 5 minute timeout
         
         if result.returncode == 0:
@@ -141,12 +150,12 @@ output:
     print("🎉 SETUP AND TEST COMPLETED SUCCESSFULLY!")
     print("=" * 50)
     print("\n📋 Next steps:")
-    print("1. Set up Azure credentials:")
-    print("   export AZURE_SUBSCRIPTION_ID='your-subscription-id'")
-    print("\n2. Deploy to Azure development environment:")
-    print("   python scripts/deploy_to_azure.py --environment development")
-    print("\n3. For production deployment:")
-    print("   python scripts/deploy_to_azure.py --environment production")
+    print("1. Run a full simulation:")
+    print("   python scripts/run_simulation.py")
+    print("\n2. Customize simulation parameters:")
+    print("   Edit config/simulation_config.yaml")
+    print("\n3. Run with custom config:")
+    print("   python scripts/run_simulation.py --config your_config.yaml")
     
     return 0
 

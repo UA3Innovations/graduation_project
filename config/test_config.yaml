@@ -1,0 +1,19 @@
+
+# Quick test configuration
+simulation:
+  start_date: "2025-06-02"
+  end_date: "2025-06-02"  # Just one day for quick test
+  time_step: 15           # Larger time step for speed
+  buses_per_line: 2       # Fewer buses for speed
+  randomize_travel_times: true
+  randomize_passenger_demand: true
+  weather_effects_probability: 0.15
+  seed: 42
+
+data:
+  stops_file: "data/ankara_bus_stops.csv"
+
+output:
+  directory: "test_output"
+  summary: true
+  debug: false

@@ -7,7 +7,11 @@ import numpy as np
 import random
 from datetime import datetime, timedelta
 from typing import Dict, List, Tuple, Optional, Set
-from ..core.data_models import BusTransitData, Bus, BusType, BusAssignment
+# Handle imports with fallback for different execution contexts
+try:
+    from ..core.data_models import BusTransitData, Bus, BusType, BusAssignment
+except ImportError:
+    from core.data_models import BusTransitData, Bus, BusType, BusAssignment
 
 
 class BusManager:
