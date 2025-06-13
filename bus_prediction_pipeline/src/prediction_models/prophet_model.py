@@ -887,7 +887,7 @@ def main():
     parser = argparse.ArgumentParser(description='Prophet Model with LSTM-like Constraints')
     parser.add_argument('--historical', required=True, help='Historical data CSV')
     parser.add_argument('--future', help='Future data CSV')
-    parser.add_argument('--bus-stops', default='ankara_bus_stops.csv', help='Bus stops CSV file')
+    parser.add_argument('--bus-stops', default='bus_prediction_pipeline/data/ankara_bus_stops.csv', help='Bus stops CSV file')
     parser.add_argument('--output', default='output_prophet_constraints', help='Output directory')
     parser.add_argument('--sequence', type=int, default=48, help='Sequence length (not used in Prophet but kept for compatibility)')
     parser.add_argument('--epochs', type=int, default=60, help='Training epochs (not used in Prophet but kept for compatibility)')

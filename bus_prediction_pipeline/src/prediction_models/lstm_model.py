@@ -1659,7 +1659,7 @@ def main():
     parser = argparse.ArgumentParser(description='Pattern-Preserving LSTM with Night-Time Constraints (1-4 AM Only)')
     parser.add_argument('--historical', required=True, help='Historical data CSV')
     parser.add_argument('--future', help='Future data CSV')
-    parser.add_argument('--bus-stops', default='ankara_bus_stops.csv', help='Bus stops CSV file')
+    parser.add_argument('--bus-stops', default='bus_prediction_pipeline/data/ankara_bus_stops.csv', help='Bus stops CSV file')
     parser.add_argument('--output', default='output_night_constraints_1_4am', help='Output directory')
     parser.add_argument('--sequence', type=int, default=48, help='Sequence length')
     parser.add_argument('--epochs', type=int, default=60, help='Training epochs')
