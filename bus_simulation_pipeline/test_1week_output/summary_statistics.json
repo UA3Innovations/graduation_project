@@ -1,0 +1,67 @@
+{
+  "total_passenger_records": 95024,
+  "total_boardings": 4128984,
+  "total_alightings": 4128407,
+  "overcrowded_records": 16056,
+  "overcrowding_percentage": 16.89678397036538,
+  "severe_overcrowding_records": 1407,
+  "severe_overcrowding_percentage": 1.480678565415053,
+  "total_stop_visits": 95024,
+  "stops_with_activity": 94904,
+  "stops_without_activity": 120,
+  "stops_without_activity_percentage": 0.12628388617612393,
+  "overcrowding_by_line": {
+    "101": {
+      "total_records": 10323,
+      "overcrowded_records": 2239,
+      "percentage": 21.689431366850723
+    },
+    "101-1": {
+      "total_records": 11199,
+      "overcrowded_records": 2037,
+      "percentage": 18.189124028931154
+    },
+    "102-1": {
+      "total_records": 8809,
+      "overcrowded_records": 865,
+      "percentage": 9.819502781246452
+    },
+    "102-2": {
+      "total_records": 9163,
+      "overcrowded_records": 759,
+      "percentage": 8.28331332533013
+    },
+    "103-1": {
+      "total_records": 8658,
+      "overcrowded_records": 1328,
+      "percentage": 15.338415338415338
+    },
+    "103-2": {
+      "total_records": 8702,
+      "overcrowded_records": 912,
+      "percentage": 10.480349344978166
+    },
+    "104-1": {
+      "total_records": 10088,
+      "overcrowded_records": 1355,
+      "percentage": 13.431800158604283
+    },
+    "104-2": {
+      "total_records": 9304,
+      "overcrowded_records": 1735,
+      "percentage": 18.647893379191746
+    },
+    "105-1": {
+      "total_records": 9014,
+      "overcrowded_records": 2343,
+      "percentage": 25.992899933436874
+    },
+    "105-2": {
+      "total_records": 9764,
+      "overcrowded_records": 2483,
+      "percentage": 25.43015157722245
+    }
+  },
+  "max_loads": [
+    {
+      "datetime": 

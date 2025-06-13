@@ -1,0 +1,403 @@
+{
+  "total_passenger_records": 10001,
+  "total_boardings": 512649,
+  "total_alightings": 512485,
+  "overcrowded_records": 1623,
+  "overcrowding_percentage": 16.22837716228377,
+  "severe_overcrowding_records": 32,
+  "severe_overcrowding_percentage": 0.31996800319968005,
+  "total_stop_visits": 10001,
+  "stops_with_activity": 9989,
+  "stops_without_activity": 12,
+  "stops_without_activity_percentage": 0.11998800119988001,
+  "overcrowding_by_line": {
+    "101": {
+      "total_records": 1252,
+      "overcrowded_records": 193,
+      "percentage": 15.415335463258787
+    },
+    "101-1": {
+      "total_records": 1417,
+      "overcrowded_records": 176,
+      "percentage": 12.42060691601976
+    },
+    "102-1": {
+      "total_records": 937,
+      "overcrowded_records": 120,
+      "percentage": 12.806830309498398
+    },
+    "102-2": {
+      "total_records": 961,
+      "overcrowded_records": 109,
+      "percentage": 11.342351716961499
+    },
+    "103-1": {
+      "total_records": 882,
+      "overcrowded_records": 155,
+      "percentage": 17.573696145124718
+    },
+    "103-2": {
+      "total_records": 810,
+      "overcrowded_records": 107,
+      "percentage": 13.209876543209875
+    },
+    "104-1": {
+      "total_records": 926,
+      "overcrowded_records": 137,
+      "percentage": 14.794816414686826
+    },
+    "104-2": {
+      "total_records": 926,
+      "overcrowded_records": 192,
+      "percentage": 20.734341252699785
+    },
+    "105-1": {
+      "total_records": 902,
+      "overcrowded_records": 210,
+      "percentage": 23.28159645232816
+    },
+    "105-2": {
+      "total_records": 988,
+      "overcrowded_records": 224,
+      "percentage": 22.672064777327936
+    }
+  },
+  "max_loads": [
+    {
+      "datetime": "2025-06-02 08:44:23.917600",
+      "line_id": "104-2",
+      "stop_id": 10928,
+      "bus_id": "1037",
+      "new_load": 307,
+      "capacity": 180,
+      "occupancy_rate": 1.7055555555555555
+    },
+    {
+      "datetime": "2025-06-02 11:05:00",
+      "line_id": "104-1",
+      "stop_id": 11433,
+      "bus_id": "1001",
+      "new_load": 301,
+      "capacity": 180,
+      "occupancy_rate": 1.6722222222222223
+    },
+    {
+      "datetime": "2025-06-02 07:59:56.350000",
+      "line_id": "103-1",
+      "stop_id": 10964,
+      "bus_id": "1044",
+      "new_load": 295,
+      "capacity": 180,
+      "occupancy_rate": 1.6388888888888888
+    },
+    {
+      "datetime": "2025-06-02 11:05:00",
+      "line_id": "103-1",
+      "stop_id": 11203,
+      "bus_id": "1012",
+      "new_load": 290,
+      "capacity": 180,
+      "occupancy_rate": 1.6111111111111112
+    },
+    {
+      "datetime": "2025-06-02 19:55:00",
+      "line_id": "104-1",
+      "stop_id": 11317,
+      "bus_id": "1048",
+      "new_load": 289,
+      "capacity": 180,
+      "occupancy_rate": 1.6055555555555556
+    },
+    {
+      "datetime": "2025-06-02 17:00:19.495000",
+      "line_id": "102-2",
+      "stop_id": 10513,
+      "bus_id": "1051",
+      "new_load": 288,
+      "capacity": 180,
+      "occupancy_rate": 1.6
+    },
+    {
+      "datetime": "2025-06-02 17:50:00",
+      "line_id": "105-2",
+      "stop_id": 13235,
+      "bus_id": "1041",
+      "new_load": 288,
+      "capacity": 180,
+      "occupancy_rate": 1.6
+    },
+    {
+      "datetime": "2025-06-02 09:30:00",
+      "line_id": "104-2",
+      "stop_id": 11204,
+      "bus_id": "1037",
+      "new_load": 288,
+      "capacity": 180,
+      "occupancy_rate": 1.6
+    },
+    {
+      "datetime": "2025-06-02 14:40:00",
+      "line_id": "101",
+      "stop_id": 12746,
+      "bus_id": "1029",
+      "new_load": 287,
+      "capacity": 180,
+      "occupancy_rate": 1.5944444444444446
+    },
+    {
+      "datetime": "2025-06-02 17:11:22.222000",
+      "line_id": "102-1",
+      "stop_id": 11440,
+      "bus_id": "1034",
+      "new_load": 286,
+      "capacity": 180,
+      "occupancy_rate": 1.5888888888888888
+    }
+  ],
+  "bus_utilization": {
+    "highest_avg_occupancy": [
+      {
+        "bus_id": "1043",
+        "occupancy_rate": 0.871078431372549
+      },
+      {
+        "bus_id": "1054",
+        "occupancy_rate": 0.8519924988279418
+      },
+      {
+        "bus_id": "1040",
+        "occupancy_rate": 0.8431137724550899
+      },
+      {
+        "bus_id": "1016",
+        "occupancy_rate": 0.8414165350184307
+      },
+      {
+        "bus_id": "1047",
+        "occupancy_rate": 0.8404691358024692
+      },
+      {
+        "bus_id": "1041",
+        "occupancy_rate": 0.840263748597082
+      },
+      {
+        "bus_id": "1042",
+        "occupancy_rate": 0.8196036801132343
+      },
+      {
+        "bus_id": "1029",
+        "occupancy_rate": 0.7835212023617821
+      },
+      {
+        "bus_id": "1007",
+        "occupancy_rate": 0.7822061191626408
+      },
+      {
+        "bus_id": "1006",
+        "occupancy_rate": 0.7742024202420242
+      }
+    ],
+    "most_passengers": [
+      {
+        "bus_id": "1054",
+        "boarding": 16625
+      },
+      {
+        "bus_id": "1047",
+        "boarding": 15844
+      },
+      {
+        "bus_id": "1016",
+        "boarding": 14996
+      },
+      {
+        "bus_id": "1041",
+        "boarding": 14215
+      },
+      {
+        "bus_id": "1011",
+        "boarding": 13962
+      },
+      {
+        "bus_id": "1023",
+        "boarding": 13654
+      },
+      {
+        "bus_id": "1014",
+        "boarding": 13649
+      },
+      {
+        "bus_id": "1007",
+        "boarding": 13630
+      },
+      {
+        "bus_id": "1046",
+        "boarding": 13360
+      },
+      {
+        "bus_id": "1006",
+        "boarding": 13197
+      }
+    ]
+  },
+  "time_patterns": {
+    "by_hour": [
+      {
+        "hour": 0,
+        "boarding": 2762,
+        "alighting": 3743
+      },
+      {
+        "hour": 1,
+        "boarding": 3085,
+        "alighting": 2991
+      },
+      {
+        "hour": 2,
+        "boarding": 1739,
+        "alighting": 1720
+      },
+      {
+        "hour": 5,
+        "boarding": 7563,
+        "alighting": 4763
+      },
+      {
+        "hour": 6,
+        "boarding": 16832,
+        "alighting": 11977
+      },
+      {
+        "hour": 7,
+        "boarding": 21979,
+        "alighting": 20123
+      },
+      {
+        "hour": 8,
+        "boarding": 17838,
+        "alighting": 18388
+      },
+      {
+        "hour": 9,
+        "boarding": 32076,
+        "alighting": 32645
+      },
+      {
+        "hour": 10,
+        "boarding": 25113,
+        "alighting": 24632
+      },
+      {
+        "hour": 11,
+        "boarding": 38067,
+        "alighting": 41438
+      },
+      {
+        "hour": 12,
+        "boarding": 45260,
+        "alighting": 44985
+      },
+      {
+        "hour": 13,
+        "boarding": 29189,
+        "alighting": 30402
+      },
+      {
+        "hour": 14,
+        "boarding": 17082,
+        "alighting": 16761
+      },
+      {
+        "hour": 15,
+        "boarding": 24387,
+        "alighting": 21963
+      },
+      {
+        "hour": 16,
+        "boarding": 24896,
+        "alighting": 23116
+      },
+      {
+        "hour": 17,
+        "boarding": 22858,
+        "alighting": 22509
+      },
+      {
+        "hour": 18,
+        "boarding": 44281,
+        "alighting": 45192
+      },
+      {
+        "hour": 19,
+        "boarding": 29491,
+        "alighting": 28420
+      },
+      {
+        "hour": 20,
+        "boarding": 23684,
+        "alighting": 22839
+      },
+      {
+        "hour": 21,
+        "boarding": 35545,
+        "alighting": 40997
+      },
+      {
+        "hour": 22,
+        "boarding": 30441,
+        "alighting": 31668
+      },
+      {
+        "hour": 23,
+        "boarding": 18481,
+        "alighting": 21213
+      }
+    ]
+  },
+  "transfer_statistics": {
+    "total_transfers": 106954,
+    "transfer_count": 2934,
+    "average_per_transfer": 36.453306066803,
+    "max_transfer_count": 158,
+    "top_transfer_stops": [
+      {
+        "stop_id": 14043,
+        "total_transfers": 8294
+      },
+      {
+        "stop_id": 11648,
+        "total_transfers": 6139
+      },
+      {
+        "stop_id": 12746,
+        "total_transfers": 4403
+      },
+      {
+        "stop_id": 10524,
+        "total_transfers": 4190
+      },
+      {
+        "stop_id": 11314,
+        "total_transfers": 3854
+      }
+    ]
+  },
+  "wait_time_statistics": {
+    "total_incidents": 4300,
+    "average_wait_time": 49.79866779260308,
+    "max_wait_time": 120.0,
+    "total_affected_passengers": 253644,
+    "incidents_by_line": {
+      "101": 533,
+      "101-1": 385,
+      "102-1": 414,
+      "102-2": 450,
+      "103-1": 429,
+      "103-2": 379,
+      "104-1": 604,
+      "104-2": 460,
+      "105-1": 301,
+      "105-2": 345
+    }
+  }
+}

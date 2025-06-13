@@ -1,0 +1,41 @@
+include README.md
+include LICENSE
+include DEPLOYMENT_GUIDE.md
+include requirements.txt
+include MANIFEST.in
+
+# Configuration files
+recursive-include config *.yaml *.yml
+
+# Data files
+recursive-include data *.csv
+
+# Documentation
+recursive-include docs *.md *.rst
+
+# Tests
+recursive-include tests *.py
+
+# Scripts
+recursive-include scripts *.py
+
+# Docker files
+recursive-include docker Dockerfile *.yml
+
+# Exclude compiled files and caches
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.so
+global-exclude .DS_Store
+
+# Exclude output directories
+prune test_output_*
+prune output
+prune results
+prune logs
+
+# Exclude development files
+exclude test_simulation_week.py
+exclude local_test.py
+exclude temp_*.py
+exclude debug_*.py 
