@@ -1,0 +1,62 @@
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - Initialized Integrated Pipeline in full mode
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - Output directory: /Users/umutulasbalci/Desktop/Python/Senior Project/schedule_optimization_project/test_full_config
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - 🚀 STARTING INTEGRATED SCHEDULE OPTIMIZATION PIPELINE
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - Mode: FULL
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - Start time: 2025-06-13 01:50:37
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - 📋 OPTIMIZED CONFIGURATION SUMMARY - FULL MODE
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - 🚌 SIMULATION PARAMETERS:
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Time Period: 2025-01-01 to 2025-12-31
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Time Resolution: 5 minutes
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Buses per Line: 12
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Passenger Generation Rate: 1.2
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Route Complexity: high
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Weather Effects: True
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Seasonal Patterns: True
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - 
+🧬 OPTIMIZATION PARAMETERS:
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Optimization Period: 30 days
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Generations: 150
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Population Size: 80
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Mutation Rate: 0.08
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Crossover Rate: 0.85
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Elite Solutions: 8
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Tournament Size: 5
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO - 
+🔮 PREDICTION PARAMETERS:
+2025-06-13 01:50:37,966 - IntegratedPipeline - INFO -   • Prediction Period: 30 days
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Prediction Horizon: 168 hours
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • LSTM Architecture: [128, 64, 32]
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • LSTM Epochs: 100
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Sequence Length: 168 hours
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Prophet Seasonality: multiplicative
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Yearly Seasonality: True
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - 
+📊 EVALUATION PARAMETERS:
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Statistical Tests: ['t_test', 'wilcoxon', 'mann_whitney']
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Confidence Level: 0.95
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Bootstrap Samples: 10,000
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Visualization Detail: high
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Constraint Validation: strict
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - 
+⏱️  PERFORMANCE EXPECTATIONS:
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Execution Time: 4-8 hours (depending on hardware)
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Memory Usage: 8-16 GB RAM
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Disk Space: ~5-10 GB for results
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Accuracy: Maximum (production-grade)
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   • Simulation Records: ~35 million passenger flows
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - 
+🔄 PIPELINE EXECUTION STEPS:
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   1. 🚌 Bus Simulation Pipeline - Generate baseline data
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   2. 🔮 Bus Prediction Pipeline - Create ML predictions
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   3. 🧬 Bus Optimization Pipeline - Genetic algorithm optimization
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO -   4. 📊 Bus Evaluation Pipeline - Comprehensive analysis
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - 
+⏳ Pipeline implementation in progress...
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - 🎉 PIPELINE COMPLETED!
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - Total duration: 0:00:00.001160
+2025-06-13 01:50:37,967 - IntegratedPipeline - INFO - Output directory: /Users/umutulasbalci/Desktop/Python/Senior Project/schedule_optimization_project/test_full_config
+2025-06-13 01:50:37,970 - IntegratedPipeline - INFO - ================================================================================

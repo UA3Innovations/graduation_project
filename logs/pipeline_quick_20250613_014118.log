@@ -1,0 +1,32 @@
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - Initialized Integrated Pipeline in quick mode
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - Output directory: /Users/umutulasbalci/Desktop/Python/Senior Project/schedule_optimization_project/test_run
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - 🚀 STARTING INTEGRATED SCHEDULE OPTIMIZATION PIPELINE
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - Mode: QUICK
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - Start time: 2025-06-13 01:41:18
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - Pipeline Configuration:
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - {
+  "simulation": {
+    "start_date": "2025-06-01",
+    "end_date": "2025-06-07",
+    "time_step": 10,
+    "buses_per_line": 8
+  },
+  "optimization": {
+    "period_days": 1,
+    "generations": 20,
+    "population_size": 20,
+    "mutation_rate": 0.1,
+    "crossover_rate": 0.8
+  },
+  "prediction": {
+    "period_days": 1,
+    "prediction_horizon": 24
+  }
+}
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - Pipeline steps will be implemented here...
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - 🎉 PIPELINE COMPLETED!
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - Total duration: 0:00:00.000205
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - Output directory: /Users/umutulasbalci/Desktop/Python/Senior Project/schedule_optimization_project/test_run
+2025-06-13 01:41:18,718 - IntegratedPipeline - INFO - ================================================================================

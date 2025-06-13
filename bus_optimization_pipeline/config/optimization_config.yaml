@@ -1,0 +1,72 @@
+# Bus Schedule Optimization Configuration
+
+optimization:
+  # Genetic Algorithm Parameters
+  population_size: 30
+  generations: 50
+  crossover_rate: 0.8
+  mutation_rate: 0.2
+  elite_size: 5
+  tournament_size: 3
+  
+  # Optimization Objective Weights (must sum to 1.0)
+  passenger_wait_weight: 0.4      # Minimize passenger waiting times
+  bus_utilization_weight: 0.3     # Maximize bus utilization
+  overcrowding_weight: 0.2        # Minimize overcrowding
+  service_coverage_weight: 0.1    # Maintain service coverage
+  
+  # Schedule Constraints
+  min_interval: 5                 # Minimum minutes between departures
+  max_interval: 60                # Maximum minutes between departures
+  operational_hours: [5, 24]      # Operating hours (5:00 - 24:00)
+  
+  # Simulation Parameters for Fitness Evaluation
+  simulation_duration_hours: 6    # Hours to simulate for fitness evaluation
+  buses_per_line: 10              # Number of buses per line
+  time_step: 10                   # Simulation time step in minutes
+  random_seed: 42                 # Random seed for reproducibility
+  
+  # Target Configuration
+  target_date: "2025-06-02"       # Date to optimize for
+  target_lines: null              # Specific lines to optimize (null = all lines)
+  # target_lines: ["101", "102-1", "105-1"]  # Example: optimize specific lines
+
+data:
+  # Input Data Files
+  stops_file: "data/ankara_bus_stops.csv"
+  
+  # Optional: Baseline simulation results for comparison
+  # baseline_simulation_file: "path/to/baseline_passenger_flow_results.csv"
+
+output:
+  # Output Configuration
+  directory: "optimization_output"
+  run_evaluation: false           # Whether to run evaluation after optimization
+  
+  # Evaluation Configuration (if run_evaluation is true)
+  generate_plots: true
+  save_detailed_report: true
+
+# Azure Deployment Configuration (optional)
+azure:
+  enabled: false
+  subscription_id: "${AZURE_SUBSCRIPTION_ID}"
+  resource_group: "bus-optimization-rg"
+  container_group_name: "bus-optimization-aci"
+  location: "eastus"
+  
+  # Container Configuration
+  container:
+    image: "bus-optimization:latest"
+    cpu: 2.0
+    memory: 4.0
+    
+  # Storage Configuration
+  storage:
+    account_name: "${AZURE_STORAGE_ACCOUNT}"
+    container_name: "optimization-results"
+    
+  # Monitoring
+  monitoring:
+    enabled: true
+    log_analytics_workspace: "${AZURE_LOG_ANALYTICS_WORKSPACE}" 

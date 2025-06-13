@@ -1,0 +1,113 @@
+version: '3.8'
+
+services:
+  # Quick pipeline run (1 week simulation)
+  schedule-optimizer-quick:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: production
+    container_name: schedule_optimizer_quick
+    volumes:
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+      - ./data:/app/data
+    environment:
+      - PIPELINE_MODE=quick
+    command: ["python", "main_pipeline/integrated_pipeline.py", "--mode", "quick"]
+    networks:
+      - optimization_network
+
+  # Full pipeline run (1 year simulation)
+  schedule-optimizer-full:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: production
+    container_name: schedule_optimizer_full
+    volumes:
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+      - ./data:/app/data
+    environment:
+      - PIPELINE_MODE=full
+    command: ["python", "main_pipeline/integrated_pipeline.py", "--mode", "full"]
+    networks:
+      - optimization_network
+    profiles:
+      - full  # Only run with --profile full
+
+  # Individual pipeline services for testing
+  simulation-pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: production
+    container_name: simulation_pipeline
+    volumes:
+      - ./outputs:/app/outputs
+      - ./bus_simulation_pipeline/test_1week_output:/app/bus_simulation_pipeline/test_1week_output
+    working_dir: /app/bus_simulation_pipeline
+    command: ["python", "scripts/run_simulation.py", "--help"]
+    networks:
+      - optimization_network
+    profiles:
+      - testing
+
+  optimization-pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: production
+    container_name: optimization_pipeline
+    volumes:
+      - ./outputs:/app/outputs
+      - ./bus_optimization_pipeline:/app/bus_optimization_pipeline
+    working_dir: /app/bus_optimization_pipeline
+    command: ["python", "src/optimization/ga_optimize.py", "--help"]
+    networks:
+      - optimization_network
+    profiles:
+      - testing
+
+  prediction-pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: production
+    container_name: prediction_pipeline
+    volumes:
+      - ./outputs:/app/outputs
+      - ./bus_prediction_pipeline:/app/bus_prediction_pipeline
+    working_dir: /app/bus_prediction_pipeline
+    command: ["python", "scripts/test_package.py"]
+    networks:
+      - optimization_network
+    profiles:
+      - testing
+
+  evaluation-pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: production
+    container_name: evaluation_pipeline
+    volumes:
+      - ./outputs:/app/outputs
+      - ./bus_evaluation_pipeline:/app/bus_evaluation_pipeline
+    working_dir: /app/bus_evaluation_pipeline
+    command: ["python", "scripts/test_evaluation.py"]
+    networks:
+      - optimization_network
+    profiles:
+      - testing
+
+networks:
+  optimization_network:
+    driver: bridge
+
+volumes:
+  optimization_outputs:
+    driver: local
+  optimization_logs:
+    driver: local 

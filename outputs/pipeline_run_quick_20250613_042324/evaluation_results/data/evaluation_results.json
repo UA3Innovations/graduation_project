@@ -1,0 +1,116 @@
+{
+  "evaluation_metadata": {
+    "timestamp": "2025-06-13T04:52:15.001038",
+    "original_metrics": {
+      "label": "Original Simulation",
+      "total_records": 61019,
+      "simulation_days": 5,
+      "total_boarding": "2913953",
+      "total_alighting": "2913546",
+      "daily_boarding": 582790.6,
+      "daily_alighting": 582709.2,
+      "avg_occupancy": 0.6732232947479018,
+      "peak_occupancy": 1.99,
+      "overcrowded_records": 11129,
+      "severely_overcrowded": 828,
+      "conservation_ratio": 0.9998603271912759,
+      "unique_buses": 67,
+      "unique_lines": 10,
+      "unique_stops": 231,
+      "rush_hour_avg_occupancy": 0.8998017953748291,
+      "rush_hour_peak_occupancy": 1.98,
+      "rush_hour_records": 18690,
+      "rush_hour_overcrowded": 5945
+    },
+    "optimized_metrics": {
+      "label": "Optimized Prediction",
+      "total_records": 25213,
+      "simulation_days": 2,
+      "total_boarding": "881066",
+      "total_alighting": "845549",
+      "daily_boarding": 440533.0,
+      "daily_alighting": 422774.5,
+      "avg_occupancy": 0.9374632134216475,
+      "peak_occupancy": 31.28,
+      "overcrowded_records": 6978,
+      "severely_overcrowded": 1614,
+      "conservation_ratio": 0.9596886044859295,
+      "unique_buses": 512,
+      "unique_lines": 10,
+      "unique_stops": 231,
+      "rush_hour_avg_occupancy": 0.9249466437177282,
+      "rush_hour_peak_occupancy": 28.24,
+      "rush_hour_records": 5810,
+      "rush_hour_overcrowded": 1669
+    }
+  },
+  "constraint_validation": {
+    "passenger_conservation": "False",
+    "resource_constraints": false,
+    "operational_constraints": "True",
+    "schedule_feasibility": false,
+    "details": {
+      "passenger_ratio": 0.7407187028260324,
+      "bus_ratio": 7.641791044776119,
+      "valid_operating_hours": "True",
+      "min_intervals": {
+        "101-1": 7.0,
+        "101": 5.0,
+        "102-1": 3.0,
+        "102-2": 5.0,
+        "103-1": 5.0,
+        "103-2": 6.0,
+        "104-1": 5.0,
+        "104-2": 6.0,
+        "105-1": 9.0,
+        "105-2": 5.0
+      }
+    },
+    "overall_pass": false,
+    "overall_score": 0.25
+  },
+  "statistical_analysis": {
+    "occupancy_improvement": {
+      "original_mean": 0.6732232947479018,
+      "optimized_mean": 0.9374632134216475,
+      "improvement_pct": -39.24996665076692,
+      "t_statistic": -53.3561291164287,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "overcrowding_reduction": {
+      "original_pct": 18.238581425457646,
+      "optimized_pct": 27.67619878634038,
+      "reduction_pct": -9.437617360882733,
+      "relative_reduction": -51.74534762725344
+    }
+  },
+  "prediction_accuracy": {
+    "boarding": {
+      "mae": 20.666666666666668,
+      "rmse": 31.94787421201396,
+      "r2_score": -0.512347711557458,
+      "mape": 29.224482186440255,
+      "correlation": -0.9839039171913494
+    },
+    "alighting": {
+      "mae": 29.666666666666668,
+      "rmse": 33.80828300875393,
+      "r2_score": -3.3478444632290785,
+      "mape": 99.99999995528746,
+      "correlation": NaN
+    },
+    "occupancy": {
+      "mae": 0.3803703703703703,
+      "rmse": 0.4287339002244237,
+      "r2_score": -0.65730615011292,
+      "mape": 42.7563616880771,
+      "correlation": -0.9365374492947593
+    },
+    "overall": {
+      "average_r2": -1.5058327749664855,
+      "average_mape": 57.32694794326827,
+      "quality_rating": "Poor"
+    }
+  }
+}

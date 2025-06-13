@@ -1,0 +1,31 @@
+{
+  "prediction_period": "2025-06-02 05:28:00.000000 to 2025-06-03 05:07:54.675400",
+  "training_records": 61019,
+  "prediction_records": 5567,
+  "model_type": "Hybrid (LSTM + Prophet)",
+  "data_source": "Optimized schedules converted to passenger flow format",
+  "lstm_config": {
+    "layers": [
+      64,
+      32
+    ],
+    "dropout": 0.3,
+    "epochs": 50,
+    "batch_size": 64,
+    "learning_rate": 0.002,
+    "sequence_length": 72
+  },
+  "prophet_config": {
+    "seasonality_mode": "additive",
+    "yearly_seasonality": false,
+    "weekly_seasonality": true,
+    "daily_seasonality": true,
+    "holidays": false,
+    "changepoint_prior_scale": 0.1,
+    "seasonality_prior_scale": 5.0
+  },
+  "hybrid_weights": {
+    "lstm": 0.7,
+    "prophet": 0.3
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "simulation_config": {
+    "start_date": "2025-06-01",
+    "end_date": "2025-06-07",
+    "time_step": 15,
+    "buses_per_line": 6,
+    "passenger_generation_rate": 1.0,
+    "route_complexity": "medium",
+    "weather_effects": false,
+    "seasonal_patterns": false,
+    "rush_hour_multiplier": 2.0,
+    "weekend_reduction": 0.7
+  },
+  "execution_time": "2025-06-13 03:12:51.393978",
+  "records_generated": {
+    "passenger_flows": 61019,
+    "bus_positions": 24025
+  }
+}

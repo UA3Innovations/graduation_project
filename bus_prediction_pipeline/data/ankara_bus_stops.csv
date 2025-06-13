@@ -1,0 +1,526 @@
+Line ID,Stop ID,Stop Name
+101,14043,Gölbaşı Hareket Noktası
+101,14044,Kır Çiçeği Evleri
+101,14194,35.Cadde
+101,13805,Milli İrade Öğrenci Yurdu
+101,13806,Gölbaşı Şht. Özel Harekatçılar Öğrenci Yurdu
+101,12745,Kampüs Girişi
+101,12579,Öğrenci Yurtları
+101,12514,Cumhuriyet Parkı
+101,11323,Gölbaşı Belediyesi
+101,11260,Jandarma
+101,11258,Baldudak İlkokulu
+101,11171,Cemre Parkı
+101,11170,774 Sk
+101,11178,Güzel Yalı Evleri
+101,11180,Gölkonakları
+101,11182,Mogan Park
+101,11183,Patalya Hotel
+101,14385,607.Cd.
+101,11174,Güney Sitesi
+101,10268,Yıldırım Cd.
+101,11187,Karçiçeği Sitesi
+101,11169,Şiringölköy Sitesi
+101,11168,Nesibe Aydın Okulları
+101,10401,Villa Kur Sitesi
+101,13951,492.Cd.
+101,12727,Fizikçiler Sitesi
+101,12707,Çeviker Konakları
+101,11167,Eskidostlar Sitesi
+101,10550,Yeşil Site
+101,11879,Cemil Özgür Villaları
+101,10297,Enda Konutları
+101,11871,Çevre Ve Orman Bakanlığı Laboratuarı
+101,14142,438. Cd.
+101,14122,441. Sk.
+101,11880,Gökkuşağı Sitesi
+101,11881,Üçhisar Sitesi
+101,11876,431. Sk.
+101,14379,Haymana Yolu
+101,11858,Hacı Hasan Kavşağı
+101,14380,Haymana Yolu
+101,10883,Demka Tel Örgü
+101,11875,Hacılar Kavşağı
+101,11868,Aquapark
+101,11870,Çevre Ve Orman Bakanlığı Labaratuarı
+101,11185,Sayıştay Eğitim Merkezi
+101,11186,Patalya Otel
+101,11181,Mogan Park
+101,11179,Gölkonakları
+101,11177,Güzel Yalı Evleri
+101,11166,774 Sk
+101,11173,Cemre Parkı
+101,13222,Darüşşifa
+101,13223,Meslek Lisesi
+101,11269,Yunus Emre Parkı
+101,13224,Şehit Gaffar Okkan
+101,13225,Osmanlı Parkı
+101,11261,Jandarma
+101,11314,Gölbaşı Belediyesi
+101,12517,Alparslan Türkeş Parkı
+101,12573,Öğrenci Yurtları
+101,12746,Ankara Üniversitesi Teknokent
+101,13235,Gölbaşı Şht. Özel Harekatçılar Öğrenci Yurdu
+101,13804,Milli İrade Öğrenci Yurdu
+101,12804,35.Cadde
+101,12806,Gürşen Sitesi
+101,12807,Şenpınar Sitesi
+101,10113,Gülkent Göl Villaları
+101,12808,Hanımlar Lokali
+101,12809,Yeşil Dostlar Sitesi
+101,13525,Özgür Sitesi
+101,13229,Umut Park
+101,12530,Serkent Sitesi
+101,12810,Papatya Sitesi
+101,13230,Gölbaşı Anadolu Lisesi
+101,12811,Trt Haberciler Evleri
+101,12812,208.Sokak
+101,10017,Öz Örenkent Sitesi
+101,14045,Başkent Sitesi
+101-1,14043,Gölbaşı Hareket Noktası
+101-1,14044,Kır Çiçeği Evleri
+101-1,14194,35.Cadde
+101-1,13805,Milli İrade Öğrenci Yurdu
+101-1,13806,Gölbaşı Şht. Özel Harekatçılar Öğrenci Yurdu
+101-1,12745,Kampüs Girişi
+101-1,12579,Öğrenci Yurtları
+101-1,12514,Cumhuriyet Parkı
+101-1,11323,Gölbaşı Belediyesi
+101-1,11260,Jandarma
+101-1,11258,Baldudak İlkokulu
+101-1,11171,Cemre Parkı
+101-1,11170,774 Sk
+101-1,11178,Güzel Yalı Evleri
+101-1,11180,Gölkonakları
+101-1,11182,Mogan Park
+101-1,11183,Patalya Hotel
+101-1,11174,Güney Sitesi
+101-1,10268,Yıldırım Cd.
+101-1,11187,Karçiçeği Sitesi
+101-1,11169,Şiringölköy Sitesi
+101-1,11168,Nesibe Aydın Okulları
+101-1,10401,Villa Kur Sitesi
+101-1,12727,Fizikçiler Sitesi
+101-1,12707,Çeviker Konakları
+101-1,11167,Eskidostlar Sitesi
+101-1,10550,Yeşil Site
+101-1,11879,Cemil Özgür Villaları
+101-1,10297,Enda Konutları
+101-1,11871,Çevre Ve Orman Bakanlığı Laboratuarı
+101-1,14142,438. Cd.
+101-1,14122,441. Sk.
+101-1,14123,Kirevleri Duraği
+101-1,11880,Gökkuşağı Sitesi
+101-1,11881,Üçhisar Sitesi
+101-1,11876,431. Sk.
+101-1,14379,Haymana Yolu
+101-1,11858,Hacı Hasan Kavşağı
+101-1,14380,Haymana Yolu
+101-1,10883,Demka Tel Örgü
+101-1,11875,Hacılar Kavşağı
+101-1,11868,Aquapark
+101-1,11870,Çevre Ve Orman Bakanlığı Labaratuarı
+101-1,11185,Sayıştay Eğitim Merkezi
+101-1,11186,Patalya Otel
+101-1,11181,Mogan Park
+101-1,11179,Gölkonakları
+101-1,11177,Güzel Yalı Evleri
+101-1,11166,774 Sk
+101-1,11173,Cemre Parkı
+101-1,13222,Darüşşifa
+101-1,13223,Meslek Lisesi
+101-1,11269,Yunus Emre Parkı
+101-1,13224,Şehit Gaffar Okkan
+101-1,13225,Osmanlı Parkı
+101-1,11261,Jandarma
+101-1,11314,Gölbaşı Belediyesi
+101-1,12517,Alparslan Türkeş Parkı
+101-1,12573,Öğrenci Yurtları
+101-1,12746,Ankara Üniversitesi Teknokent
+101-1,13235,Gölbaşı Şht. Özel Harekatçılar Öğrenci Yurdu
+101-1,13804,Milli İrade Öğrenci Yurdu
+101-1,12804,35.Cadde
+101-1,12806,Gürşen Sitesi
+101-1,12807,Şenpınar Sitesi
+101-1,10113,Gülkent Göl Villaları
+101-1,12808,Hanımlar Lokali
+101-1,12809,Yeşil Dostlar Sitesi
+101-1,13525,Özgür Sitesi
+101-1,14403,Rüyakent Sitesi
+101-1,10028,Karaoğlan Mahallesi
+101-1,13842,Karaoğlan Mahallesi
+101-1,13114,Serpme Evler Durağı
+101-1,13115,Karaoğlan Cami
+101-1,13116,Gençler Durağı
+101-1,11997,Gençler Durağı
+101-1,11980,Karaoğlan Cami
+101-1,11998,Serpme Evler Durağı
+101-1,13843,Karaoğlan Mahallesi
+101-1,13898,Karaoğlan Mahallesi
+101-1,14404,Rüyakent Sitesi
+101-1,13229,Umut Park
+101-1,12530,Serkent Sitesi
+101-1,12810,Papatya Sitesi
+101-1,13230,Gölbaşı Anadolu Lisesi
+101-1,12811,Trt Haberciler Evleri
+101-1,12812,208.Sokak
+101-1,10017,Öz Örenkent Sitesi
+101-1,14045,Başkent Sitesi
+102-1,11519,Emniyet Sarayı
+102-1,11467,Etiler Ordu Evi
+102-1,11474,Diş Hekimliği Fakültesi
+102-1,11440,Gazi Hastanesi
+102-1,11431,Zübeyde Hanım Yurt Müdürlüğü
+102-1,10967,Emek
+102-1,10968,Aşti
+102-1,10871,Ufuk Üniversitesi Hastanesi
+102-1,10869,Ö.Harekat Şehitleri Anadolu İhl
+102-1,10926,Cumhurbaşkanlığı İletişim Başkanlığı
+102-1,10931,Balgat Köprüsü
+102-1,10928,Taurus Avm
+102-1,10863,Fen Lisesi
+102-1,10861,Ardiye
+102-1,10859,Gökkuşağı Mahallesi
+102-1,10857,Akpınar Mahallesi
+102-1,10855,Turan Dökmeci İlköğretim Okulu
+102-1,10854,Çeşme
+102-1,11206,Dikmen Kavşağı
+102-1,11203,İncek Kavşağı
+102-1,10737,Anayasa Mahkemesi
+102-1,11223,Adalet Akademisi
+102-1,11234,Ted Koleji Kavşağı
+102-1,12878,Taşpınar
+102-1,10658,Jandarma Okullar Komutanlığı
+102-1,10608,2886 Cadde
+102-1,10609,Ahlatlıbel
+102-1,10610,Aydınlar Sitesi
+102-1,10516,Rıdvan Ege Kampüsü
+102-1,10518,İncek Polis Merkezi
+102-1,10519,Atılım Üniversitesi
+102-1,10524,Atılım Üniversitesi
+102-2,10524,Atılım Üniversitesi
+102-2,10513,Atılım Üniversitesi
+102-2,10514,İncek Polis Merkezi
+102-2,10515,Rıdvan Ege Kampüsü
+102-2,10607,Ahlatlıbel
+102-2,10726,2898 Cadde
+102-2,10730,Okullar Komutanlığı
+102-2,12879,Taşpınar
+102-2,11233,Ted Koleji Kavşağı
+102-2,11231,Rasathane
+102-2,10736,Rasathane
+102-2,10738,Anayasa Mahkemesi
+102-2,11205,İncek Kavşağı
+102-2,11207,Dikmen Kavşağı
+102-2,10856,Çeşme
+102-2,13202,Akpınar
+102-2,13261,Turhan Dökmeci İlkokulu
+102-2,10860,Akpınar Mahallesi
+102-2,12831,Gökkuşağı Apartmanı
+102-2,10862,Gökkuşağı Mahallesi
+102-2,10864,Koşuyolu Parkı
+102-2,10865,Fen Lisesi
+102-2,10930,Taurus Avm
+102-2,10932,Kamu İhale Kurumu
+102-2,10933,Balgat Köprüsü
+102-2,10870,Yurtdışı Türkler Başkanlığı
+102-2,10872,Ö.Harekat Şehitleri Anadolu İhl
+102-2,10873,Ufuk Üniversitesi
+102-2,12018,Aşti
+102-2,11433,Bahçelievler
+102-2,11442,Gazi Hastanesi
+102-2,11462,Diş Hekimliği Fakültesi
+102-2,11469,Etiler Ordu Evi
+102-2,11521,Emniyet Sarayı
+103-1,11648,Opera
+103-1,11657,Sıhhiye
+103-1,11615,Kızılay
+103-1,12213,Yargıtay
+103-1,12102,Karayolları Genel Müdürlüğü
+103-1,10964,Milli Kütüphane
+103-1,10979,Turizm Bakanlığı
+103-1,10975,Hazine Ve Maliye Bakanlığı
+103-1,10871,Ufuk Üniversitesi Hastanesi
+103-1,10869,Ö.Harekat Şehitleri Anadolu İhl
+103-1,10926,Cumhurbaşkanlığı İletişim Başkanlığı
+103-1,10931,Balgat Köprüsü
+103-1,10928,Taurus Avm
+103-1,10863,Fen Lisesi
+103-1,10861,Ardiye
+103-1,10859,Gökkuşağı Mahallesi
+103-1,10857,Akpınar Mahallesi
+103-1,10855,Turan Dökmeci İlköğretim Okulu
+103-1,10854,Çeşme
+103-1,11206,Dikmen Kavşağı
+103-1,11203,İncek Kavşağı
+103-1,10737,Anayasa Mahkemesi
+103-1,11223,Adalet Akademisi
+103-1,11232,Rasathane
+103-1,11234,Ted Koleji Kavşağı
+103-1,12878,Taşpınar
+103-1,10658,Jandarma Okullar Komutanlığı
+103-1,10608,2886 Cadde
+103-1,10609,Ahlatlıbel
+103-1,10610,Aydınlar Sitesi
+103-1,10516,Rıdvan Ege Kampüsü
+103-1,10518,İncek Polis Merkezi
+103-1,10519,Atılım Üniversitesi
+103-1,10524,Atılım Üniversitesi
+103-2,10524,Atılım Üniversitesi
+103-2,10513,Atılım Üniversitesi
+103-2,10514,İncek Polis Merkezi
+103-2,10515,Rıdvan Ege Kampüsü
+103-2,10607,Ahlatlıbel
+103-2,10726,2898 Cadde
+103-2,10730,Okullar Komutanlığı
+103-2,12879,Taşpınar
+103-2,11233,Ted Koleji Kavşağı
+103-2,10736,Rasathane
+103-2,10738,Anayasa Mahkemesi
+103-2,11205,İncek Kavşağı
+103-2,11207,Dikmen Kavşağı
+103-2,10856,Çeşme
+103-2,10858,Turhan Dökmeci İlköğretim Okulu
+103-2,10860,Akpınar Mahallesi
+103-2,10862,Gökkuşağı Mahallesi
+103-2,10864,Koşuyolu Parkı
+103-2,10865,Fen Lisesi
+103-2,10930,Taurus Avm
+103-2,10932,Kamu İhale Kurumu
+103-2,10933,Balgat Köprüsü
+103-2,10870,Yurtdışı Türkler Başkanlığı
+103-2,10872,Ö.Harekat Şehitleri Anadolu İhl
+103-2,10873,Ufuk Üniversitesi
+103-2,10973,Sayıştay
+103-2,10989,Milli Kütüphane
+103-2,11093,Kara Kuvvetleri Komutanlığı
+103-2,12101,Karayolları Genel Müdürlüğü
+103-2,12218,Güvenpark
+103-2,11620,Kızılay
+103-2,30062,Sıhhiye
+103-2,30003,Opera
+104-1,14043,Gölbaşı Hareket Noktası
+104-1,14044,Kır Çiçeği Evleri
+104-1,13805,Milli İrade Öğrenci Yurdu
+104-1,13806,Gölbaşı Şht. Özel Harekatçılar Öğrenci Yurdu
+104-1,12745,Kampüs Girişi
+104-1,12579,Öğrenci Yurtları
+104-1,12514,Cumhuriyet Parkı
+104-1,11317,Gölbaşı Kaymakamlık
+104-1,11319,288 Sokak
+104-1,11320,Mevlana Camii
+104-1,12755,Bahçeli Park
+104-1,10116,329 Sokak
+104-1,10396,Saray Evleri Duraği
+104-1,10399,Gülbaği Yolu
+104-1,11363,Örencik İlköğretim Okulu
+104-1,14052,Yağmur Evler Sitesi
+104-1,13233,Trafo Durağı
+104-1,14195,Anaokulu
+104-1,13234,İbrahim Sıtkı Göçmen Parkı
+104-1,12632,Öğretmenler Sitesi
+104-1,11321,Seğmenler Mahallesi Muhtarlığı
+104-1,11293,Seğmenler Sağlık Merkezi
+104-1,11304,Mevlana Parkı
+104-1,14022,927. Cd
+104-1,11246,Ankara Caddesi
+104-1,11253,Fatma Ercan Cami
+104-1,11252,Üst Geçit
+104-1,11275,Osmanlı Parkı
+104-1,11273,Şelale Parkı
+104-1,11271,Gölbaşı Sanayi Sitesi
+104-1,11172,Samanyolu Avm 1. Durak
+104-1,10741,Samanyolu Avm 2. Durak
+104-1,10739,Samanyolu Avm 3. Durak
+104-1,11205,İncek Kavşağı
+104-1,11207,Dikmen Kavşağı
+104-1,10856,Çeşme
+104-1,13202,Akpınar
+104-1,10858,Turhan Dökmeci İlköğretim Okulu
+104-1,10860,Akpınar Mahallesi
+104-1,10862,Gökkuşağı Mahallesi
+104-1,10864,Koşuyolu Parkı
+104-1,10865,Fen Lisesi
+104-1,10930,Taurus Avm
+104-1,10933,Balgat Köprüsü
+104-1,10870,Yurtdışı Türkler Başkanlığı
+104-1,10872,Ö.Harekat Şehitleri Anadolu İhl
+104-1,10873,Ufuk Üniversitesi
+104-1,10969,Aşti
+104-1,11433,Bahçelievler
+104-1,11442,Gazi Hastanesi
+104-1,11462,Diş Hekimliği Fakültesi
+104-1,11469,Etiler Ordu Evi
+104-1,11521,Emniyet Sarayı
+104-1,12758,Akköprü
+104-2,12758,Akköprü
+104-2,11467,Etiler Ordu Evi
+104-2,11474,Diş Hekimliği Fakültesi
+104-2,11440,Gazi Hastanesi
+104-2,11431,Zübeyde Hanım Yurt Müdürlüğü
+104-2,10967,Emek
+104-2,10968,Aşti
+104-2,10871,Ufuk Üniversitesi Hastanesi
+104-2,10869,Ö.Harekat Şehitleri Anadolu İhl
+104-2,10926,Cumhurbaşkanlığı İletişim Başkanlığı
+104-2,10931,Balgat Köprüsü
+104-2,10928,Taurus Avm
+104-2,10863,Fen Lisesi
+104-2,10861,Ardiye
+104-2,10859,Gökkuşağı Mahallesi
+104-2,10857,Akpınar Mahallesi
+104-2,10855,Turan Dökmeci İlköğretim Okulu
+104-2,10854,Çeşme
+104-2,11206,Dikmen Kavşağı
+104-2,11204,İncek Kavşağı
+104-2,10740,Samanyolu Avm
+104-2,11270,Sanayi Sitesi
+104-2,11272,Şelale Parkı
+104-2,13856,407.Sokak
+104-2,13224,Şehit Gaffar Okkan
+104-2,13225,Osmanlı Parkı
+104-2,11261,Jandarma
+104-2,11314,Gölbaşı Belediyesi
+104-2,12728,Gölbaşı Kaymakamlık
+104-2,12636,Mevlana Parkı
+104-2,14386,936.Sk.
+104-2,11290,Seğmenler Sağlık Merkezi
+104-2,11328,Seğmenler Mahallesi Muhtarlığı
+104-2,11339,Öğretmenler Sitesi
+104-2,10410,İbrahim Sitki Göçmen Parki
+104-2,14196,Anaokulu
+104-2,10403,Trafo Duraği
+104-2,14059,Yağmur Evler Sitesi
+104-2,10400,Gülbaği Yolu
+104-2,10397,Saray Evleri Duraği
+104-2,10139,329 Sokak
+104-2,12754,Bahçeli Park
+104-2,11327,Mevlana Camii
+104-2,11326,288 Sokak
+104-2,12513,Sevgi Çiçeği İlköğretim Okulu
+104-2,12517,Alparslan Türkeş Parkı
+104-2,12573,Öğrenci Yurtları
+104-2,12746,Ankara Üniversitesi Teknokent
+104-2,13184,Yurtlar
+104-2,13183,Spor Bilimleri Fakültesi
+104-2,13182,Kurum Belge Arşivi
+104-2,13181,Yabancı Diller
+104-2,13235,Gölbaşı Şht. Özel Harekatçılar Öğrenci Yurdu
+104-2,13804,Milli İrade Öğrenci Yurdu
+104-2,12804,35.Cadde
+104-2,14045,Başkent Sitesi
+104-2,12809,Yeşil Dostlar Sitesi
+105-1,14043,Gölbaşı Hareket Noktası
+105-1,13805,Milli İrade Öğrenci Yurdu
+105-1,13806,Gölbaşı Şht. Özel Harekatçılar Öğrenci Yurdu
+105-1,12745,Kampüs Girişi
+105-1,12579,Öğrenci Yurtları
+105-1,12514,Cumhuriyet Parkı
+105-1,11317,Gölbaşı Kaymakamlık
+105-1,11319,288 Sokak
+105-1,11320,Mevlana Camii
+105-1,12755,Bahçeli Park
+105-1,10116,329 Sokak
+105-1,10396,Saray Evleri Duraği
+105-1,10399,Gülbaği Yolu
+105-1,11363,Örencik İlköğretim Okulu
+105-1,14052,Yağmur Evler Sitesi
+105-1,13233,Trafo Durağı
+105-1,14195,Anaokulu
+105-1,13234,İbrahim Sıtkı Göçmen Parkı
+105-1,12632,Öğretmenler Sitesi
+105-1,11321,Seğmenler Mahallesi Muhtarlığı
+105-1,11293,Seğmenler Sağlık Merkezi
+105-1,11304,Mevlana Parkı
+105-1,14022,927. Cd
+105-1,11246,Ankara Caddesi
+105-1,11253,Fatma Ercan Cami
+105-1,11252,Üst Geçit
+105-1,11275,Osmanlı Parkı
+105-1,11273,Şelale Parkı
+105-1,11271,Gölbaşı Sanayi Sitesi
+105-1,11172,Samanyolu Avm 1. Durak
+105-1,10741,Samanyolu Avm 2. Durak
+105-1,10739,Samanyolu Avm 3. Durak
+105-1,11205,İncek Kavşağı
+105-1,11207,Dikmen Kavşağı
+105-1,10856,Çeşme
+105-1,13202,Akpınar
+105-1,10858,Turhan Dökmeci İlköğretim Okulu
+105-1,10860,Akpınar Mahallesi
+105-1,10862,Gökkuşağı Mahallesi
+105-1,10864,Koşuyolu Parkı
+105-1,10865,Fen Lisesi
+105-1,10930,Taurus Avm
+105-1,10933,Balgat Köprüsü
+105-1,10870,Yurtdışı Türkler Başkanlığı
+105-1,10872,Ö.Harekat Şehitleri Anadolu İhl
+105-1,10873,Ufuk Üniversitesi
+105-1,10973,Sayıştay
+105-1,10989,Milli Kütüphane
+105-1,11093,Kara Kuvvetleri Komutanlığı
+105-1,12101,Karayolları Genel Müdürlüğü
+105-1,12218,Güvenpark
+105-1,11620,Kızılay
+105-1,30062,Sıhhiye
+105-1,30003,Opera
+105-1,40452,Otel Durağı
+105-2,40463,Ulus Ziraat Bankası
+105-2,11648,Opera
+105-2,11666,Sıhhiye
+105-2,11615,Kızılay
+105-2,12213,Yargıtay
+105-2,12102,Karayolları Genel Müdürlüğü
+105-2,10964,Milli Kütüphane
+105-2,10979,Turizm Bakanlığı
+105-2,10975,Hazine Ve Maliye Bakanlığı
+105-2,10871,Ufuk Üniversitesi Hastanesi
+105-2,10869,Ö.Harekat Şehitleri Anadolu İhl
+105-2,10926,Cumhurbaşkanlığı İletişim Başkanlığı
+105-2,10931,Balgat Köprüsü
+105-2,10928,Taurus Avm
+105-2,10863,Fen Lisesi
+105-2,10861,Ardiye
+105-2,10859,Gökkuşağı Mahallesi
+105-2,10857,Akpınar Mahallesi
+105-2,10855,Turan Dökmeci İlköğretim Okulu
+105-2,10854,Çeşme
+105-2,11206,Dikmen Kavşağı
+105-2,11204,İncek Kavşağı
+105-2,10740,Samanyolu Avm
+105-2,11270,Sanayi Sitesi
+105-2,11272,Şelale Parkı
+105-2,13856,407.Sokak
+105-2,13224,Şehit Gaffar Okkan
+105-2,13225,Osmanlı Parkı
+105-2,11261,Jandarma
+105-2,11314,Gölbaşı Belediyesi
+105-2,12728,Gölbaşı Kaymakamlık
+105-2,12636,Mevlana Parkı
+105-2,14386,936.Sk.
+105-2,11290,Seğmenler Sağlık Merkezi
+105-2,11328,Seğmenler Mahallesi Muhtarlığı
+105-2,11339,Öğretmenler Sitesi
+105-2,10410,İbrahim Sitki Göçmen Parki
+105-2,14196,Anaokulu
+105-2,10403,Trafo Duraği
+105-2,14059,Yağmur Evler Sitesi
+105-2,10400,Gülbaği Yolu
+105-2,10397,Saray Evleri Duraği
+105-2,10139,329 Sokak
+105-2,12754,Bahçeli Park
+105-2,11327,Mevlana Camii
+105-2,11326,288 Sokak
+105-2,12513,Sevgi Çiçeği İlköğretim Okulu
+105-2,12517,Alparslan Türkeş Parkı
+105-2,12573,Öğrenci Yurtları
+105-2,12746,Ankara Üniversitesi Teknokent
+105-2,13184,Yurtlar
+105-2,13183,Spor Bilimleri Fakültesi
+105-2,13182,Kurum Belge Arşivi
+105-2,13181,Yabancı Diller
+105-2,13235,Gölbaşı Şht. Özel Harekatçılar Öğrenci Yurdu
+105-2,13804,Milli İrade Öğrenci Yurdu
+105-2,12804,35.Cadde
+105-2,14045,Başkent Sitesi
+105-2,12809,Yeşil Dostlar Sitesi

@@ -1,0 +1,41 @@
+GENETIC ALGORITHM OPTIMIZATION EVALUATION REPORT
+================================================================================
+
+Generated on: 2025-06-13 04:02:58
+
+EXECUTIVE SUMMARY
+----------------------------------------
+The genetic algorithm optimization FAILED TO improve bus schedule efficiency while adhering to all operational constraints.
+
+KEY IMPROVEMENTS ACHIEVED:
+• Occupancy rate reduced by -32.3%
+• Overcrowding incidents reduced by -48.6%
+• Peak occupancy reduced from 199.0% to 1434.0%
+• Conservation ratio maintained at 0.989
+
+DETAILED PERFORMANCE COMPARISON
+----------------------------------------
+Metric                         Original        Optimized       Change         
+---------------------------------------------------------------------------
+Daily Passengers               582,791         197,361         -66.1%         
+Average Occupancy              67.3%           89.1%           -32.3%         
+Peak Occupancy                 199.0%          1434.0%         +620.6%        
+Overcrowded Records            11,129          1,509           -48.6%         
+Buses Used                     67              67              +0             
+
+CONSTRAINT VALIDATION RESULTS
+----------------------------------------
+Passenger Conservation: ❌ FAIL
+Resource Constraints: ✅ PASS
+Operational Constraints: ✅ PASS
+Schedule Feasibility: ✅ PASS
+Overall Validation: ❌ FAIL
+
+STATISTICAL ANALYSIS
+----------------------------------------
+Occupancy improvement p-value: 0.000000
+Statistical significance: Yes
+
+CONCLUSION
+----------------------------------------
+The optimization results do not meet all validation criteria. Further analysis and refinement may be required.

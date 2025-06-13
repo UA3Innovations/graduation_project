@@ -1,0 +1,32 @@
+{
+  "optimization_date": "2025-06-02",
+  "ga_config": {
+    "period_days": 1,
+    "generations": 30,
+    "population_size": 30,
+    "mutation_rate": 0.12,
+    "crossover_rate": 0.75,
+    "elite_size": 3,
+    "tournament_size": 3,
+    "convergence_threshold": 0.01,
+    "max_stagnation": 10,
+    "fitness_weights": {
+      "occupancy": 0.5,
+      "waiting_time": 0.35,
+      "fuel_efficiency": 0.1,
+      "schedule_regularity": 0.05
+    }
+  },
+  "lines_optimized": [
+    "101",
+    "101-1"
+  ],
+  "schedules_per_line": {
+    "101": 36,
+    "101-1": 31
+  },
+  "fitness_scores": {
+    "101": 0.8121139032132771,
+    "101-1": 0.8126430487707956
+  }
+}

@@ -1,0 +1,89 @@
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - Initialized Integrated Pipeline in quick mode
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - Output directory: /Users/umutulasbalci/Desktop/Python/Senior Project/schedule_optimization_project/outputs/pipeline_run_quick_20250613_015826
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - 🚀 STARTING INTEGRATED SCHEDULE OPTIMIZATION PIPELINE
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - Mode: QUICK
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - Start time: 2025-06-13 01:58:26
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - 📋 OPTIMIZED CONFIGURATION SUMMARY - QUICK MODE
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - 🚌 SIMULATION PARAMETERS:
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Time Period: 2025-06-01 to 2025-06-07
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Time Resolution: 15 minutes
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Buses per Line: 6
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Passenger Generation Rate: 1.0
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Route Complexity: medium
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Weather Effects: False
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Seasonal Patterns: False
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - 
+🧬 OPTIMIZATION PARAMETERS:
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Optimization Period: 1 days
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Generations: 30
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Population Size: 30
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Mutation Rate: 0.12
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Crossover Rate: 0.75
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Elite Solutions: 3
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Tournament Size: 3
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO - 
+🔮 PREDICTION PARAMETERS:
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Prediction Period: 1 days
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Prediction Horizon: 24 hours
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • LSTM Architecture: [64, 32]
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • LSTM Epochs: 50
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Sequence Length: 72 hours
+2025-06-13 01:58:26,226 - IntegratedPipeline - INFO -   • Prophet Seasonality: additive
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Yearly Seasonality: False
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO - 
+📊 EVALUATION PARAMETERS:
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Statistical Tests: ['t_test']
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Confidence Level: 0.9
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Bootstrap Samples: 1,000
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Visualization Detail: medium
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Constraint Validation: standard
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO - 
+⏱️  PERFORMANCE EXPECTATIONS:
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Execution Time: 15-45 minutes
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Memory Usage: 2-4 GB RAM
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Disk Space: ~500 MB for results
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Accuracy: High (suitable for testing/validation)
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO -   • Simulation Records: ~95,000 passenger flows
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO - STEP 1: RUNNING BUS SIMULATION PIPELINE
+2025-06-13 01:58:26,227 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:58:26,696 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-06-13 01:58:26,885 - IntegratedPipeline - INFO - Initializing simulation with parameters:
+2025-06-13 01:58:26,885 - IntegratedPipeline - INFO -   - Period: 2025-06-01 to 2025-06-07
+2025-06-13 01:58:26,885 - IntegratedPipeline - INFO -   - Time step: 15 minutes
+2025-06-13 01:58:26,885 - IntegratedPipeline - INFO -   - Buses per line: 6
+2025-06-13 01:58:26,894 - IntegratedPipeline - ERROR - ❌ Simulation pipeline failed: 'line_id'
+2025-06-13 01:58:26,900 - IntegratedPipeline - ERROR - Traceback: Traceback (most recent call last):
+  File "/Users/umutulasbalci/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'line_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/umutulasbalci/Desktop/Python/Senior Project/schedule_optimization_project/main_pipeline/integrated_pipeline.py", line 307, in run_simulation_pipeline
+    engine = SimulationEngine(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/umutulasbalci/Desktop/Python/Senior Project/schedule_optimization_project/main_pipeline/mock_implementations.py", line 26, in __init__
+    self.bus_lines = self.bus_stops['line_id'].unique()[:5]  # Use first 5 lines
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/umutulasbalci/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/umutulasbalci/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'line_id'
+
+2025-06-13 01:58:26,900 - IntegratedPipeline - INFO - ================================================================================
+2025-06-13 01:58:26,901 - IntegratedPipeline - INFO - ❌ PIPELINE FAILED!
+2025-06-13 01:58:26,901 - IntegratedPipeline - INFO - Total duration: 0:00:00.674516
+2025-06-13 01:58:26,901 - IntegratedPipeline - INFO - Output directory: /Users/umutulasbalci/Desktop/Python/Senior Project/schedule_optimization_project/outputs/pipeline_run_quick_20250613_015826
+2025-06-13 01:58:26,901 - IntegratedPipeline - INFO - ================================================================================
