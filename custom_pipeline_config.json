@@ -1,0 +1,76 @@
+{
+    "project_name": "bus_optimization_1week_sim_1day_opt",
+    "base_output_dir": "pipeline_output_custom",
+    "stops_file": "ankara_bus_stops_10.csv",
+    "random_seed": 42,
+    "enable_summary": true,
+    
+    "simulation": {
+        "start_date": "2025-06-02",
+        "end_date": "2025-06-09",
+        "time_step": 5,
+        "buses_per_line": 6,
+        "output_dir": "simulation_output",
+        "enable_debug": false,
+        "weather_effects": true
+    },
+    
+    "genetic_algorithm": {
+        "population_size": 20,
+        "generations": 20,
+        "crossover_rate": 0.8,
+        "mutation_rate": 0.2,
+        "elite_size": 4,
+        "tournament_size": 3,
+        "passenger_wait_weight": 0.3,
+        "bus_utilization_weight": 0.3,
+        "overcrowding_weight": 0.2,
+        "service_coverage_weight": 0.2,
+        "min_interval": 5,
+        "max_interval": 60,
+        "operational_hours": [5, 24],
+        "simulation_duration_hours": 4,
+        "buses_per_line": 8,
+        "time_step": 10,
+        "optimization_date": "2025-06-02",
+        "target_lines": null,
+        "output_file": "ga_optimized_schedule_1day.csv"
+    },
+    
+    "passenger_flow_generation": {
+        "baseline_preservation": true,
+        "apply_hourly_patterns": true,
+        "output_file": "ga_optimized_passenger_flow_1day.csv"
+    },
+    
+    "hybrid_model": {
+        "sequence_length": 48,
+        "epochs": 30,
+        "save_models": true,
+        "load_pretrained": false,
+        "model_dir": "",
+        "output_dir": "output_hybrid_custom",
+        "enable_route_adjustments": true,
+        "enable_realistic_constraints": true,
+        "enable_night_constraints": true,
+        "normal_day_weights": {"lstm": 0.7, "prophet": 0.3},
+        "special_day_weights": {"lstm": 0.3, "prophet": 0.7}
+    },
+    
+    "evaluation": {
+        "generate_visualizations": true,
+        "generate_report": true,
+        "comparison_metrics": [
+            "occupancy_rate", 
+            "passenger_conservation", 
+            "resource_utilization", 
+            "schedule_feasibility"
+        ],
+        "constraint_tolerances": {
+            "passenger_volume_error": 10.0,
+            "pattern_correlation_min": 0.6,
+            "bus_usage_tolerance": 1.2
+        },
+        "improvement_threshold": 5.0
+    }
+} 
